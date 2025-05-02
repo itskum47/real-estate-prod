@@ -2,9 +2,9 @@ name: Docker CI Pipeline
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build-and-run:
@@ -20,4 +20,3 @@ jobs:
     - name: Build and Run Docker Compose
       run: |
         docker compose up --build -d
-
